@@ -1,0 +1,24 @@
+{
+  "name": "unacademy",
+  "version": "1.0.0",
+  "description": "data-structure implementation",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "rollup": "^2.44.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.3"
+  }
+}
