@@ -1,5 +1,5 @@
 {
-  "name": "data-structure.js",
+  "name": "algo-structure",
   "version": "1.0.0",
   "description": "data-structure implementation",
   "main": "build/index.js",

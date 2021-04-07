@@ -1,10 +1,20 @@
-## data-structure.js
+## algo-structure
 
 - Basic JavaScript library to implement common compute science data structure e.g. stack, queue, linkedlist, heap etc.
 
+### Usage
+```
+npm i algo-structure 
+```
+or
+
+```
+yarn algo-structure 
+```
+
 ### Stack
 ```
-import { Stack } from "data-structure.js";
+import { Stack } from "algo-structure";
 const stack = new Stack<number>();
 stack.push(1);
 stack.pop();
@@ -15,7 +25,7 @@ stack.peek();
 
 ### Queue
 ```
-import { Queue } from "data-structure.js";
+import { Queue } from "algo-structure";
 const queue = new Queue<number>();
 queue.enqueue(1);
 queue.top();
