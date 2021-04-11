@@ -32,3 +32,12 @@ queue.top();
 queue.dequeue();
 queue.isEmpty();
 ```
+
+### List
+```
+const list = new List<number>();
+list.insert(1);
+list.insert(2);
+console.log(list.search(2));
+list.delete(2);
+```
