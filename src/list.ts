@@ -47,21 +47,30 @@ class List<T> {
     }
 
     search(item: T) {
-        if (this.head === null) {
-            return -1;
-        } else if (this.head.data === item) {
-            return 0;
-        }
         let ref = this.head;
         let index = 0;
-        while (ref && ref.next) {
-            index++;
-            if (ref.next.data === item) {
+        while (ref) {
+            if (ref.data === item) {
                 return index;
             }
+            index++;
             ref = ref.next;
         }
         return -1;
+    }
+
+    isEmpty() {
+        return this.head === null;
+    }
+
+    size() {
+        let index = 0;
+        let ref = this.head;
+        while(ref !== null) {
+            ref = ref.next;
+            index++;
+        }
+        return index;
     }
 }
 
