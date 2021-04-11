@@ -35,6 +35,7 @@ queue.isEmpty();
 
 ### List
 ```
+import { List } from "algo-structure";
 const list = new List<number>();
 list.insert(1);
 list.insert(2);
