@@ -9,7 +9,18 @@ npm i algo-structure
 or
 
 ```
-yarn algo-structure 
+yarn add algo-structure 
+```
+
+### Import
+
+```
+    import { Stack, Queue, List } from "algo-structure";
+```
+or
+
+```
+    const { Stack, Queue, List } = require("algo-structure");
 ```
 
 ### Stack
