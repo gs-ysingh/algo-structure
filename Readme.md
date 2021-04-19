@@ -15,12 +15,12 @@ yarn add algo-structure
 ### Import
 
 ```
-    import { Stack, Queue, List } from "algo-structure";
+    import { Stack, Queue, List, MaxHeap, MinHeap } from "algo-structure";
 ```
 or
 
 ```
-    const { Stack, Queue, List } = require("algo-structure");
+    const { Stack, Queue, List, MaxHeap, MinHeap } = require("algo-structure");
 ```
 
 ### Stack
