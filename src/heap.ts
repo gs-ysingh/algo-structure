@@ -26,7 +26,7 @@ class Heap<T> {
     }
 
     isLeaf(index: number) {
-        return index >= Math.floor(this.size / 2) && index < this.size;
+        return this.heap[this.leftChild(index)] === undefined && this.heap[this.rightChild(index)] === undefined;
     }
 
     getHeap() {
@@ -55,9 +55,9 @@ class MinHeap<T> extends Heap<T> {
             const left = this.leftChild(index);
             const right = this.rightChild(index);
             if (this.heap[index] > this.heap[left] || this.heap[index] > this.heap[right]) {
-                const max = this.heap[left] < this.heap[right] ? left : right;
-                swap(this.heap, index, max);
-                this.heapify(max);
+                const min = this.heap[left] <= this.heap[right] ? left : right;
+                swap(this.heap, index, min);
+                this.heapify(min);
             }
         }
     }
@@ -109,7 +109,7 @@ class MaxHeap<T> extends Heap<T> {
             const left = this.leftChild(index);
             const right = this.rightChild(index);
             if (this.heap[index] < this.heap[left] || this.heap[index] < this.heap[right]) {
-                const max = this.heap[left] > this.heap[right] ? left : right;
+                const max = this.heap[left] >= this.heap[right] ? left : right;
                 swap(this.heap, index, max);
                 this.heapify(max);
             }

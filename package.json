@@ -1,6 +1,6 @@
 {
   "name": "algo-structure",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "data-structure implementation",
   "main": "build/index.js",
   "module": "build/index.esm.js",
