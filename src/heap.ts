@@ -55,7 +55,14 @@ class MinHeap<T> extends Heap<T> {
             const left = this.leftChild(index);
             const right = this.rightChild(index);
             if (this.heap[index] > this.heap[left] || this.heap[index] > this.heap[right]) {
-                const min = this.heap[left] <= this.heap[right] ? left : right;
+                let min = 0;
+
+                if (!this.heap[right]) {
+                    min = left;
+                } else {
+                    min = this.heap[left] <= this.heap[right] ? left : right;    
+                }
+
                 swap(this.heap, index, min);
                 this.heapify(min);
             }
@@ -109,7 +116,12 @@ class MaxHeap<T> extends Heap<T> {
             const left = this.leftChild(index);
             const right = this.rightChild(index);
             if (this.heap[index] < this.heap[left] || this.heap[index] < this.heap[right]) {
-                const max = this.heap[left] >= this.heap[right] ? left : right;
+                let max = 0;
+                if(!this.heap[right]) {
+                    max = left;
+                } else {
+                    max = this.heap[left] >= this.heap[right] ? left : right;   
+                }
                 swap(this.heap, index, max);
                 this.heapify(max);
             }
